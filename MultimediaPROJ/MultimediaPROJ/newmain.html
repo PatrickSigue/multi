@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="newmain.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#contact-us" class="nav-link">Contact</a></li>
+                <li><a href="#contact-us" class="nav-link">Home</a></li>
+                <li><a href="#contact-us" class="nav-link">Budget</a></li>
+                <li><a href="#contact-us" class="nav-link">Reports</a></li>
+                <li style="font-size: 20px;"><span id="username" onclick="confirmLogout()" class="nav-link"></span></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="box box1">
+                <div class="floating-box">
+                    <form id="transaction-form" action="/submit-transaction" method="post">
+                        <h2 style="font-family: Impact, sans-serif;">Add Transaction</h2>
+                        <table id="transaction-table">
+                            <tr>
+                                <td><label for="date">Date:</label></td>
+                                <td><input type="date" id="date" name="date" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="amount">Amount:</label></td>
+                                <td><input type="number" id="amount" name="amount" step="0.01" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="category">Category:</label></td>
+                                <td>   
+                                    <select id="category" name="category" required>
+                                        <option value="">Select a category</option>
+                                        <option value="groceries">Groceries</option>
+                                        <option value="rent">Rent</option>
+                                        <option value="utilities">Utilities</option>
+                                        <option value="transportation">Transportation</option>
+                                        <option value="entertainment">Entertainment</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="remarks">Remarks:</label></td>
+                                <td><textarea id="remarks" name="remarks" maxlength="100"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="submit" value="Submit"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div class="box box2">Box 2</div>
+        </div>
+        <div class="row">
+            <div class="box box3">
+                <div id="transaction-history">
+                    <h2 style="font-family: Impact, sans-serif;">Transaction History</h2>
+                    <table id="transaction-list" class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Category</th>
+                                <th>Remark</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023-12-25</td>
+                                <td>5000</td>
+                                <td>entertainment</td>
+                                <td>habadususejj</td>
+                            </tr>   
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="box box4">Box 4</div>
+        </div>
+    </div>
+    <script src="newmain.js"></script>
+</body>
+</html>

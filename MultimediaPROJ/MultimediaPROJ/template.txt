@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landing Page</title>
+<style>
+.container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Set height to 100% of viewport height */
+    }
+    .content {
+        text-align: center;
+    }
+</style>
+</head>
+<body style = "background-image: url('bgimage.png'); background-size: cover; background-repeat: no-repeat;">
+  <div class="container">
+    <div class="content">
+   		<img src="gglogo.png" align = "center" style = "height :15vw">
+        <p style = "font-size: 5vw; margin-top: 5px ; margin-bottom: 10px">AlkansyAlly</p>
+        <p style = "font-size: 1vw; margin-bottom: 25px">AlkansyAlly is a virtual wallet and budgeting tool, help track spending, budgets, and <br>savings,while also offering goal setting features and visual financial reports.</p>
+        <form action="templatemain.html" method="post">
+    		<input type="image" src="bigbut.png" alt="Submit" style = "height: 2.5vw;">
+		</form>
+    </div>
+
+</body>
+</html>
+
+

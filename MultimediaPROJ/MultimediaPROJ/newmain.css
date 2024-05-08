@@ -1,0 +1,202 @@
+/* newmain.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Courier, monospace;
+}
+
+nav {
+    height: 30px;
+    background-color: #FAA7D8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a,
+nav ul li span {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease;
+    font-size: 20px; 
+}
+
+nav ul li a:hover,
+nav ul li span:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 30px);
+    overflow: auto; /* Add overflow property */
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    flex: 1; /* Add flex: 1 to make boxes equal width */
+}
+
+.box:first-child {
+    width: auto; /* Add this line to make box 1 and box 2 occupy the remaining space */
+}
+
+.box.box3 {
+    height: 50vh;; /* Adjust the height as needed */
+    overflow: auto;
+}
+
+.floating-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-box h2 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.floating-box input[type="submit"] {
+    background-color: #FAA7D8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.floating-box input[type="submit"]:hover {
+    background-color: #F777C3;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    flex: 1;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    flex: 2;
+    margin-left: 10px; /* Adjust as needed for spacing */
+}
+
+.form-row input[type="submit"] {
+    flex: 2;
+    margin-left: auto;
+}
+
+.transaction-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.transaction-list th,
+.transaction-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.transaction-list th {
+    background-color: #f2f2f2;
+}
+
+.transaction-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.transaction-list tr:hover {
+    background-color: #f2f2f2;
+
+}
+.transaction-history {
+    height: calc(100% - 40px); /* Adjust the height as needed */
+    overflow: auto;
+}
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+}
+
+.styled-table th {
+    text-align: left;
+}
+
+.styled-table thead th {
+    background-color: #55608f;
+}
+
+.styled-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.styled-table tbody td {
+    position: relative;
+}
+
+.styled-table tbody td:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+}
+
+#remarks {
+    resize: none;
+}
